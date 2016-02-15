@@ -36,12 +36,12 @@ namespace Messaging
 				// Enter the listening loop.
 				while(true) 
 				{
-					Console.Write("Waiting for a connection... ");
+					Console.Write("[SERVER]Waiting for a connection... ");
 
 					// Perform a blocking call to accept requests.
 					// You could also user server.AcceptSocket() here.
 					TcpClient client = server.AcceptTcpClient();            
-					Console.WriteLine("Connected!");
+					Console.WriteLine("[SERVER]Connected!");
 
 					data = null;
 
@@ -55,7 +55,7 @@ namespace Messaging
 					{   
 						// Translate data bytes to a ASCII string.
 						data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
-						Console.WriteLine("Received: {0}", data);
+						Console.WriteLine("[SERVER]Received: {0}", data);
 
 						// Process the data sent by the client.
 						data = data.ToUpper();
@@ -64,7 +64,7 @@ namespace Messaging
 
 						// Send back a response.
 						stream.Write(msg, 0, msg.Length);
-						Console.WriteLine("Sent: {0}", data);            
+						Console.WriteLine("[SERVER]Sent: {0}", data);            
 					}
 
 					// Shutdown and end connection
@@ -73,7 +73,7 @@ namespace Messaging
 			}
 			catch(SocketException e)
 			{
-				Console.WriteLine("SocketException: {0}", e);
+				Console.WriteLine("[SERVER]SocketException: {0}", e);
 			}
 			finally
 			{
@@ -82,7 +82,7 @@ namespace Messaging
 			}
 
 
-			Console.WriteLine("\nHit enter to continue...");
+			Console.WriteLine("\n[SERVER]Hit enter to continue...");
 			Console.Read();
 		}   
 		}

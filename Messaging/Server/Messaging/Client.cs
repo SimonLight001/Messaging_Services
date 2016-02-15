@@ -33,7 +33,7 @@ namespace Messaging
 		{
 			while (true) 
 			{
-				Console.WriteLine ("GIB MESSAGE BAUS");
+				Console.WriteLine ("[CLIENT]GIB MESSAGE BAUS");
 				var mes = Console.ReadLine ();
 				sendMessage (mes);
 				break;
@@ -44,9 +44,9 @@ namespace Messaging
 		public void Main ()
 		{
 			client = new TcpClient(host, port);
-			Console.WriteLine ("== Messaging Client v0.0.1 ==");
+			Console.WriteLine ("[CLIENT]== Messaging Client v0.0.1 ==");
 			messageLoop();
-			Console.WriteLine ("== Leaving Client ==");
+			Console.WriteLine ("[CLIENT]== Leaving Client ==");
 		}
 	}
 }
