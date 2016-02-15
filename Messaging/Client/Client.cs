@@ -2,9 +2,9 @@
 using System.Net;
 using System.Net.Sockets;
 
-namespace Messaging
+namespace Client
 {
-	class Client
+	public class Client
 	{
 		int port;
 		string host;
@@ -41,9 +41,9 @@ namespace Messaging
 		}
 
 		//entry function
-		public void Main ()
+		public void clientMain ()
 		{
-			client = new TcpClient(host, port);
+			client = new TcpClient(this.host, this.port);
 			Console.WriteLine ("[CLIENT]== Messaging Client v0.0.1 ==");
 			messageLoop();
 			Console.WriteLine ("[CLIENT]== Leaving Client ==");

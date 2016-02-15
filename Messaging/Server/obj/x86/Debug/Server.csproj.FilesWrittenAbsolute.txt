@@ -1,0 +1,7 @@
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/bin/Debug/Client.dll
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/bin/Debug/Client.dll.mdb
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/bin/Debug/Messaging.exe.mdb
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/bin/Debug/Messaging.exe
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/obj/x86/Debug/Messaging.exe
+/Users/tom/code/csharp/Messaging_Services/Messaging/Server/obj/x86/Debug/Messaging.exe.mdb

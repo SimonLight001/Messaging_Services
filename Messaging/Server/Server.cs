@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Net;
+using Client;
 
-namespace Messaging
+namespace Server
 {
 	class Server
 	{
@@ -29,9 +30,9 @@ namespace Messaging
 
 				//Create client and run async
 				//I wonder if it will work....
-				//Client messagingClient = new Client (port, localAddr.ToString ());
-				//Action clientAction = messagingClient.Main;
-				//clientAction.BeginInvoke (ar => clientAction.EndInvoke(ar), null);
+				Client.Client messagingClient = new Client.Client(port, localAddr.ToString ());
+				Action clientAction = messagingClient.clientMain;
+				clientAction.BeginInvoke (ar => clientAction.EndInvoke(ar), null);
 
 
 				// Enter the listening loop.

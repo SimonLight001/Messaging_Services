@@ -37,4 +37,10 @@
     <Compile Include="Server.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Client\Client.csproj">
+      <Project>{39F36FDA-8CC5-4A8E-8417-2342D297A083}</Project>
+      <Name>Client</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
