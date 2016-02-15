@@ -4,11 +4,11 @@ using System.Net;
 
 namespace Messaging
 {
-	class MainClass
+	class Server
 	{
 		public static void Main (string[] args)
 		{
-			Client messagingClient = new Client ();
+
 			TcpListener server=null;   
 			try
 			{
@@ -25,6 +25,13 @@ namespace Messaging
 				// Buffer for reading data
 				Byte[] bytes = new Byte[256];
 				String data = null;
+
+				//Create client and run async
+				//I wonder if it will work....
+				Client messagingClient = new Client (port, localAddr.ToString ());
+				Action clientAction = messagingClient.Main;
+				clientAction.BeginInvoke (ar => clientAction.EndInvoke(ar), null);
+
 
 				// Enter the listening loop.
 				while(true) 
@@ -81,5 +88,3 @@ namespace Messaging
 		}
 
 	}
-
-
