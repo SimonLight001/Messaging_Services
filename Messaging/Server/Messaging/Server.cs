@@ -12,6 +12,7 @@ namespace Messaging
 			TcpListener server=null;   
 			try
 			{
+				
 				// Set the TcpListener on port 13000.
 				Int32 port = 13000;
 				IPAddress localAddr = IPAddress.Parse("127.0.0.1");
@@ -28,9 +29,9 @@ namespace Messaging
 
 				//Create client and run async
 				//I wonder if it will work....
-				Client messagingClient = new Client (port, localAddr.ToString ());
-				Action clientAction = messagingClient.Main;
-				clientAction.BeginInvoke (ar => clientAction.EndInvoke(ar), null);
+				//Client messagingClient = new Client (port, localAddr.ToString ());
+				//Action clientAction = messagingClient.Main;
+				//clientAction.BeginInvoke (ar => clientAction.EndInvoke(ar), null);
 
 
 				// Enter the listening loop.
