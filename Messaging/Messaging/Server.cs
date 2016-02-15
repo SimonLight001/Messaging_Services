@@ -8,6 +8,7 @@ namespace Messaging
 	{
 		public static void Main (string[] args)
 		{
+			Client messagingClient = new Client ();
 			TcpListener server=null;   
 			try
 			{
